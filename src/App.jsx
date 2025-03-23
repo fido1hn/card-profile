@@ -39,7 +39,7 @@ function Intro() {
 }
 
 function SkillList({ skills }) {
-  console.log(skills);
+  // console.log(skills);
   return (
     <ul className="skill-list">
       {skills.map((skill) => (
