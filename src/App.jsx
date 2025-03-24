@@ -1,11 +1,11 @@
 import "./index.css";
 
 const skills = [
-  { id: 0, name: "HTML+CSS", color: "#2257e6", emoji: "🦾" },
-  { id: 1, name: "JavaScript", color: "#e9d221", emoji: "🦾" },
-  { id: 2, name: "Web Design", color: "#98ce00", emoji: "🦾" },
+  { id: 0, name: "HTML+CSS", color: "#2257e6", emoji: "💪" },
+  { id: 1, name: "JavaScript", color: "#e9d221", emoji: "💪" },
+  { id: 2, name: "Web Design", color: "#98ce00", emoji: "💪" },
   { id: 3, name: "Git and Github", color: "#e5452d", emoji: "👍" },
-  { id: 4, name: "React", color: "#53d4f6", emoji: "🦾" },
+  { id: 4, name: "React", color: "#53d4f6", emoji: "💪" },
   { id: 5, name: "Svelte", color: "#e5452d", emoji: "👶" },
 ];
 
@@ -43,14 +43,20 @@ function SkillList({ skills }) {
   return (
     <ul className="skill-list">
       {skills.map((skill) => (
-        <li
-          key={skill.id}
-          className="skill"
-          style={{ backgroundColor: skill.color }}>
-          {skill.name} {skill.emoji}
-        </li>
+        <Skill skill={skill} />
       ))}
     </ul>
+  );
+}
+
+function Skill({ skill }) {
+  return (
+    <li
+      key={skill.id}
+      className="skill"
+      style={{ backgroundColor: skill.color }}>
+      {skill.name} {skill.emoji}
+    </li>
   );
 }
 
